@@ -1,6 +1,4 @@
 "use strict";
-
-const privat = false;
 // first task
 let numberOfFilms;
 // console.log(numberOfFilms);
@@ -23,11 +21,9 @@ const personalMovieDB = {
     privat: false
 };
 
-function showMyDB(){
-    if (privat == true) {
+function showMyDB(hidden){
+    if (!hidden) {
         console.log(personalMovieDB);
-    } else {
-        console.log('private mode');
     }
 }
 
@@ -62,4 +58,13 @@ function detectPersonalLevel() {
         alert('Произошла ошибка !');
     }
 }
+function writeYourGenres() {
+    for(let i = 0; i < 3; i++) {
+        const genre = prompt(`Ваш любимый жанр  под номером ${i+1}`);
+        personalMovieDB.genres[i] = genre;
+        // personalMovieDB.genres[i] = prompt(`Ваш любимый жанр  под номером ${i+1}`);    // 2 вариант
+    }
+}
+writeYourGenres();
 detectPersonalLevel();
+showMyDB(personalMovieDB.privat);
