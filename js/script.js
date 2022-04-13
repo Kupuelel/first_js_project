@@ -23,8 +23,11 @@ for (let i = 0; i < 2; i++) {
         personalMovieDB.movies[a] = b;
         console.log('DONE');
     } else {
-        console.log('ERROR');
         i--;
-    } 
+        console.log('ERROR');
+    }
+    
+    personalMovieDB.movies[a] = b; 
 }
 
+console.log(personalMovieDB);
