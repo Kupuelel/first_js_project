@@ -28,6 +28,17 @@ for (let i = 0; i < 2; i++) {
     }
     
     personalMovieDB.movies[a] = b; 
+    
+}
+
+if (personalMovieDB.count < 10) {
+    alert('Просмотренн довольно мало фильмов');
+} else if (personalMovieDB.count >= 10 && personalMovieDB.count <=30) {
+    alert('Вы классический зритель');
+} else if (personalMovieDB.count > 30) {
+    alert(`${personalMovieDB.count} фильмов, да вы киноман !`);
+} else {
+    alert('Произошла ошибка !');
 }
 
 console.log(personalMovieDB);
